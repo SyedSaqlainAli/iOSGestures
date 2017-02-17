@@ -12,6 +12,11 @@
 		3389D36E1E56D2470030900D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3389D36C1E56D2470030900D /* Main.storyboard */; };
 		3389D3701E56D2470030900D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3389D36F1E56D2470030900D /* Assets.xcassets */; };
 		3389D3731E56D2470030900D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3389D3711E56D2470030900D /* LaunchScreen.storyboard */; };
+		3389D37B1E56DF6D0030900D /* UpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3389D37A1E56DF6D0030900D /* UpViewController.swift */; };
+		3389D37D1E56DF810030900D /* DownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3389D37C1E56DF810030900D /* DownViewController.swift */; };
+		3389D37F1E56DF8C0030900D /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3389D37E1E56DF8C0030900D /* LeftViewController.swift */; };
+		3389D3811E56DF960030900D /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3389D3801E56DF960030900D /* RightViewController.swift */; };
+		3389D3831E56E66C0030900D /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3389D3821E56E66C0030900D /* image.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		3389D36F1E56D2470030900D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3389D3721E56D2470030900D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3389D3741E56D2470030900D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3389D37A1E56DF6D0030900D /* UpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpViewController.swift; sourceTree = "<group>"; };
+		3389D37C1E56DF810030900D /* DownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownViewController.swift; sourceTree = "<group>"; };
+		3389D37E1E56DF8C0030900D /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		3389D3801E56DF960030900D /* RightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
+		3389D3821E56E66C0030900D /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +66,15 @@
 			children = (
 				3389D3681E56D2470030900D /* AppDelegate.swift */,
 				3389D36A1E56D2470030900D /* ViewController.swift */,
+				3389D37A1E56DF6D0030900D /* UpViewController.swift */,
+				3389D37C1E56DF810030900D /* DownViewController.swift */,
+				3389D37E1E56DF8C0030900D /* LeftViewController.swift */,
+				3389D3801E56DF960030900D /* RightViewController.swift */,
 				3389D36C1E56D2470030900D /* Main.storyboard */,
 				3389D36F1E56D2470030900D /* Assets.xcassets */,
 				3389D3711E56D2470030900D /* LaunchScreen.storyboard */,
 				3389D3741E56D2470030900D /* Info.plist */,
+				3389D3821E56E66C0030900D /* image.jpg */,
 			);
 			path = iOSGesture;
 			sourceTree = "<group>";
@@ -127,6 +142,7 @@
 				3389D3731E56D2470030900D /* LaunchScreen.storyboard in Resources */,
 				3389D3701E56D2470030900D /* Assets.xcassets in Resources */,
 				3389D36E1E56D2470030900D /* Main.storyboard in Resources */,
+				3389D3831E56E66C0030900D /* image.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +155,10 @@
 			files = (
 				3389D36B1E56D2470030900D /* ViewController.swift in Sources */,
 				3389D3691E56D2470030900D /* AppDelegate.swift in Sources */,
+				3389D37D1E56DF810030900D /* DownViewController.swift in Sources */,
+				3389D37F1E56DF8C0030900D /* LeftViewController.swift in Sources */,
+				3389D37B1E56DF6D0030900D /* UpViewController.swift in Sources */,
+				3389D3811E56DF960030900D /* RightViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

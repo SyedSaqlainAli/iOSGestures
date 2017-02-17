@@ -1,26 +1,224 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Left View Controller-->
+        <scene sceneID="ASU-TS-oQg">
+            <objects>
+                <viewController storyboardIdentifier="LeftViewController" id="AgV-fd-TNj" customClass="LeftViewController" customModule="iOSGesture" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0qb-6s-Jai"/>
+                        <viewControllerLayoutGuide type="bottom" id="sgL-3d-J82"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f6u-FU-PbR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Left ViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZu-bZ-FgS">
+                                <rect key="frame" x="67" y="272" width="187" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="y3E-V3-BQf" appends="YES" id="1n4-DX-D4w"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XXI-Wi-yDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="y3E-V3-BQf">
+                    <connections>
+                        <action selector="Left:" destination="AgV-fd-TNj" id="ocH-nZ-0B5"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-84" y="465"/>
+        </scene>
+        <!--Up View Controller-->
+        <scene sceneID="xZk-h6-P8m">
+            <objects>
+                <viewController storyboardIdentifier="UpViewController" id="GO9-le-VIg" customClass="UpViewController" customModule="iOSGesture" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xYg-pN-POk"/>
+                        <viewControllerLayoutGuide type="bottom" id="OVa-4e-Yiz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UGg-KY-HH0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Up ViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOn-zh-Ysy">
+                                <rect key="frame" x="72" y="272" width="176" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="iBf-E3-TYR" appends="YES" id="j1i-d4-Cdl"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gCf-T5-ueJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="iBf-E3-TYR">
+                    <connections>
+                        <action selector="Up:" destination="GO9-le-VIg" id="6qb-NH-bTC"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="806" y="-233"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="iOSGesture" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Main ViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVn-NK-khH">
+                                <rect key="frame" x="63" y="272" width="195" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.53729081150000002" green="0.62212544680000004" blue="0.0031377610280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="hXL-cn-Gi3" appends="YES" id="Akc-7P-TIL"/>
+                            <outletCollection property="gestureRecognizers" destination="zdA-dW-suK" appends="YES" id="7T3-YJ-K0l"/>
+                            <outletCollection property="gestureRecognizers" destination="WAm-ZP-fT1" appends="YES" id="phZ-Bw-zPQ"/>
+                            <outletCollection property="gestureRecognizers" destination="jIb-7g-Cye" appends="YES" id="8XF-xe-hlV"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="7wT-hf-eDq"/>
+                    <connections>
+                        <outlet property="lblMain" destination="KVn-NK-khH" id="RzO-c1-lbu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="hXL-cn-Gi3">
+                    <connections>
+                        <action selector="left:" destination="BYZ-38-t0r" id="0C0-jh-aE0"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="zdA-dW-suK">
+                    <connections>
+                        <action selector="right:" destination="BYZ-38-t0r" id="7um-2c-MbR"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="WAm-ZP-fT1">
+                    <connections>
+                        <action selector="up:" destination="BYZ-38-t0r" id="mvQ-4W-iGi"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="jIb-7g-Cye">
+                    <connections>
+                        <action selector="down:" destination="BYZ-38-t0r" id="N6V-Gl-awv"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="804" y="465"/>
+        </scene>
+        <!--Right View Controller-->
+        <scene sceneID="56d-0C-O0W">
+            <objects>
+                <viewController storyboardIdentifier="RightViewController" id="PzR-ZO-GOS" customClass="RightViewController" customModule="iOSGesture" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Saw-vY-0bT"/>
+                        <viewControllerLayoutGuide type="bottom" id="O63-65-fvX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lif-h1-UBF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Dzj-LS-oOX">
+                                <rect key="frame" x="90" y="214" width="141" height="141"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.6215377514" blue="0.72200607750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="EmY-OF-L0g" appends="YES" id="oOs-Xq-Jng"/>
+                            <outletCollection property="gestureRecognizers" destination="dmc-cn-4aP" appends="YES" id="C29-Hk-Kye"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Dzj-LS-oOX" id="DWv-It-RYz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K4y-fa-RUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="EmY-OF-L0g">
+                    <connections>
+                        <action selector="Right:" destination="PzR-ZO-GOS" id="dJD-YQ-E4n"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="dmc-cn-4aP">
+                    <connections>
+                        <action selector="PanGesture:" destination="PzR-ZO-GOS" id="flv-FO-N2m"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1534" y="465"/>
+        </scene>
+        <!--Down View Controller-->
+        <scene sceneID="YOk-Bz-YWW">
+            <objects>
+                <viewController storyboardIdentifier="DownViewController" id="a8b-jb-T8Z" customClass="DownViewController" customModule="iOSGesture" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oKb-gP-4gO"/>
+                        <viewControllerLayoutGuide type="bottom" id="UQQ-Lc-uHo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qwI-jB-ULz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Down ViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOr-8h-k06">
+                                <rect key="frame" x="58" y="272" width="204" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="syf-XY-aDq" appends="YES" id="TUC-j2-nVW"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gh1-6g-AvN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="syf-XY-aDq">
+                    <connections>
+                        <action selector="Down:" destination="a8b-jb-T8Z" id="4Zd-hM-fSd"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="802" y="1274"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image.jpg" width="1920" height="1080"/>
+    </resources>
 </document>

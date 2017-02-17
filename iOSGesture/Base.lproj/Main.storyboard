@@ -152,8 +152,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Dzj-LS-oOX">
-                                <rect key="frame" x="90" y="214" width="141" height="141"/>
+                                <rect key="frame" x="105" y="69" width="110" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oeV-WT-Nyi">
+                                <rect key="frame" x="85" y="313" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.6215377514" blue="0.72200607750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -164,6 +174,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="finalImageView" destination="oeV-WT-Nyi" id="diQ-U8-YmM"/>
                         <outlet property="imageView" destination="Dzj-LS-oOX" id="DWv-It-RYz"/>
                     </connections>
                 </viewController>
@@ -179,7 +190,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1534" y="465"/>
+            <point key="canvasLocation" x="1533.75" y="464.78873239436621"/>
         </scene>
         <!--Down View Controller-->
         <scene sceneID="YOk-Bz-YWW">

@@ -13,6 +13,9 @@ class RightViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var finalImageView: UIImageView!
+    
+    var acctualPosition : CGPoint?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +35,11 @@ class RightViewController: UIViewController {
         let viewController = storyboard.instantiateViewController(withIdentifier: "MainViewController") as UIViewController
         present(viewController, animated: false, completion: nil)
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        acctualPosition = self.imageView.frame.origin
     }
 
     
@@ -59,6 +67,26 @@ class RightViewController: UIViewController {
         if sender.state == UIGestureRecognizerState.ended {
             
             //add something you want to happen when the Label Panning has ended
+            let position = sender.location(in: self.view)
+            if ((position.x <= self.finalImageView.frame.origin.x + self.finalImageView.frame.width) && (position.x >= self.finalImageView.frame.origin.x)) && ((position.y <= self.finalImageView.frame.origin.y + self.finalImageView.frame.height) && (position.y >= self.finalImageView.frame.origin.y)) {
+                
+                self.imageView.isHidden = true
+                
+                self.finalImageView.image = self.imageView.image
+                
+                let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+                animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+                animation.duration = 0.6
+                animation.values = [-20.0, 20.0, -20.0, 20.0, -10.0, 10.0, -5.0, 5.0, 0.0 ]
+                self.finalImageView.layer.add(animation, forKey: "shake")
+                
+            }else{
+                
+                self.imageView.frame.origin = acctualPosition!
+                
+                
+            }
+            
             print("end")
         }
         
@@ -72,21 +100,17 @@ class RightViewController: UIViewController {
             print("Position in View: \(position)")
             
             if ((position.x <= self.imageView.frame.origin.x + self.imageView.frame.width) && (position.x >= self.imageView.frame.origin.x)) && ((position.y <= self.imageView.frame.origin.y + self.imageView.frame.height) && (position.y >= self.imageView.frame.origin.y)) {
+                
+                
                 self.imageView.frame.origin = CGPoint(x: self.imageView.frame.origin.x + translation.x, y: self.imageView.frame.origin.y + translation.y)
-
+                self.imageView.frame.size.height = 100.0
+                self.imageView.frame.size.width = 100.0
+                
             }
             
             
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
+
             print("changed")
         }
             
@@ -98,7 +122,10 @@ class RightViewController: UIViewController {
     }
         
         
-        
+   
+    
+   
+    
     
     
     
